@@ -114,7 +114,7 @@ fig.show()
 
 #Extra
 #Count of each group of sentiment/day
-fig = px.bar(plot3, x="date", y="count", color="polarity_score", title="Count of each group of sentiment/day",pattern_shape="polarity_score", pattern_shape_sequence=[".", "x", "+"],width=1000, height=800)
+fig = px.bar(plot3, x="date", y="count", color="polarity_score", title="Count of each sentiment group/day",pattern_shape="polarity_score", pattern_shape_sequence=[".", "x", "+"],width=1000, height=800)
 fig.show()
 
 
