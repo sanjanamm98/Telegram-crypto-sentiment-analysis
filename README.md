@@ -53,5 +53,8 @@ However, comparing SpaCy and Pycld2, SpaCy gave better results for our data.
 
 ## **Instructions**
 - requirements.txt contains all the packages and versions required to run the project.
-- To run the project, execute run.py file. It will result in 3 plots whose screenshots are added to the repository. 'df' can be printed to see the date, text, polarity and sentiment score of each message.
+- To run the project, execute sentiment_analysis.ipynb file. It will result in 3 plots whose screenshots are added to the repository. 'df' is a dataframe which shows date, text, polarity and sentiment score of each message.
 - result.json contains the crawled data in JSON format that was used for analysis using python. 
+
+## **Note:**
+- sentiment_analysis.ipynb has to be run on notebook because iplot is used to visualize plots and iplot can only run inside an ipython notebook.
