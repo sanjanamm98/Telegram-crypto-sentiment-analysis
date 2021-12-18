@@ -1,2 +1,9 @@
 # Telegram-crypto-sentiment-analysis
-Using the dataset from telegram's crypto group text messages, we preprocess data, compute sentiment score, analyze and plot score over time. 
+Telegram's crypto group text messages are used for sentimental analysis. 
+
+Process:
+- Data craweling
+- Preprocess
+- Compute Sentimental score
+- Analyze data and plotting
+
