@@ -34,14 +34,14 @@ In this project, I aim to crawl messages from telegram's crypo group for a certa
 ## **Choice of Python Packages:**
 
 #### **SpaCy**
-SpaCy is a python library used in some Natural language processing tasks. It deloys a 'spacy_langdetect' library model in a SpaCy NLP pipeline. 
-I choose SpaCy library to remove non-english messages because of its good prediction accuracy with short messages. Since, most of the messages were short, this library gave good results. SpaCy returns detected language and accuracy in the detect_language variable. SpaCy does not work very well with sentences containing multiple languages. In this case, it returns detected language of the longer sentences. But, multiple language was not an issue with our data. 
+- SpaCy is a python library used in some Natural language processing tasks. It deloys a 'spacy_langdetect' library model in a SpaCy NLP pipeline. 
+- I choose SpaCy library to remove non-english messages because of its good prediction accuracy with short messages. Since, most of the messages were short, this library gave good results. SpaCy returns detected language and accuracy in the detect_language variable. SpaCy does not work very well with sentences containing multiple languages. In this case, it returns detected language of the longer sentences. But, multiple language was not an issue with our data. 
 Alternatively, Pycld2 can be used when there are multiple languages in a sentence. 
 However, comparing SpaCy and Pycld2, SpaCy gave better results for our data.
 
 #### **NLTK's pretrained sentiment analyzer called 'VADER'**
-'VADER' is a rule-based sentiment analysis tool which are generally labeled according to their semantic orientation as either positive or negative. VADER not only tells about the Positivity and Negativity score but also tells us about how positive or negative a sentiment is (percentage).
-Since VADER is pretrained, results can be generated quickly than many other analyzers. However, VADER is best suited for language used in social media, like short sentences with some slang and abbreviations. It’s less accurate when rating longer, structured sentences but this doesn't affect the data used for this project. 
+- 'VADER' is a rule-based sentiment analysis tool which are generally labeled according to their semantic orientation as either positive or negative. VADER not only tells about the Positivity and Negativity score but also tells us about how positive or negative a sentiment is (percentage).
+- Since VADER is pretrained, results can be generated quickly than many other analyzers. However, VADER is best suited for language used in social media, like short sentences with some slang and abbreviations. It’s less accurate when rating longer, structured sentences but this doesn't affect the data used for this project. 
 
 ## **Results & Findings**
 1) From the analysis, it can be concluded that the average sentiment on each day is between neutral and positive (mostly neutral) towards SHIB and DOGE coins. 'Compound' score from VADER is used to calculate the sentiment of each message. The compound score is the sum of positive, negative & neutral scores which is then normalized between -1(most extreme negative) and +1 (most extreme positive). The compound score is averaged/ per day and the results are slightly greater than 0 (neutral to positive). This is shown in the plot named 'average_sentiment_per_day.png'
@@ -53,5 +53,5 @@ Since VADER is pretrained, results can be generated quickly than many other anal
 
 ## **Instructions**
 - requirements.txt contains all the packages and versions required to run the project.
-- To run the project, execute run.py file. It will result in 3 plots whose screenshots are added to the repository. 'df' can be printed to see the dataset.
+- To run the project, execute run.py file. It will result in 3 plots whose screenshots are added to the repository. 'df' can be printed to see the date, text, polarity and sentiment score of each message.
 - result.json contains the crawled data in JSON format that was used for analysis using python. 
